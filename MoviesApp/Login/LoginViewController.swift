@@ -7,18 +7,19 @@
 //
 
 import UIKit
-import FacebookLogin
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var facebookButton: FacebookButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let loginButton = LoginButton(readPermissions: [ .publicProfile ])
-        loginButton.center = view.center
+        checkIfUserIsLoggedByFacebook()
         
-        view.addSubview(loginButton)
     }
 
-
+    private func checkIfUserIsLoggedByFacebook() {
+        
+    }
 }
 

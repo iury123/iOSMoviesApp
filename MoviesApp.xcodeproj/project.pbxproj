@@ -13,6 +13,9 @@
 		569E542D220205590023B103 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 569E542C220205590023B103 /* Assets.xcassets */; };
 		569E5430220205590023B103 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 569E542E220205590023B103 /* LaunchScreen.storyboard */; };
 		569E543B220205590023B103 /* MoviesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569E543A220205590023B103 /* MoviesAppTests.swift */; };
+		56EF6B9A22024AA600B0C2CB /* FacebookButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56EF6B9922024AA600B0C2CB /* FacebookButton.swift */; };
+		56FC329B22021F64001BDAD5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56FC329A22021F64001BDAD5 /* GoogleService-Info.plist */; };
+		56FC329E220220F4001BDAD5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56FC329D220220F4001BDAD5 /* Constants.swift */; };
 		7FF3DADB2DD7C82862F8EFF9 /* Pods_MoviesAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6E9536252B0FED50597DAF7 /* Pods_MoviesAppTests.framework */; };
 		96FA8204C5C4F6055719D003 /* Pods_MoviesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF7CED3C8546F00025C00E96 /* Pods_MoviesApp.framework */; };
 /* End PBXBuildFile section */
@@ -40,6 +43,9 @@
 		569E5436220205590023B103 /* MoviesAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		569E543A220205590023B103 /* MoviesAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesAppTests.swift; sourceTree = "<group>"; };
 		569E543C220205590023B103 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56EF6B9922024AA600B0C2CB /* FacebookButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookButton.swift; sourceTree = "<group>"; };
+		56FC329A22021F64001BDAD5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		56FC329D220220F4001BDAD5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7DCD40F3C0094DBE3B288056 /* Pods-MoviesAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoviesAppTests/Pods-MoviesAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A6E9536252B0FED50597DAF7 /* Pods_MoviesAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoviesAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7CED3C8546F00025C00E96 /* Pods_MoviesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoviesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +104,9 @@
 		569E5424220205580023B103 /* MoviesApp */ = {
 			isa = PBXGroup;
 			children = (
+				56EF6B942202429600B0C2CB /* CustomControls */,
+				56FC329C220220E2001BDAD5 /* Utils */,
+				56FC329A22021F64001BDAD5 /* GoogleService-Info.plist */,
 				56FC32992202110C001BDAD5 /* Login */,
 				569E5425220205580023B103 /* AppDelegate.swift */,
 				569E5429220205580023B103 /* Main.storyboard */,
@@ -117,12 +126,28 @@
 			path = MoviesAppTests;
 			sourceTree = "<group>";
 		};
+		56EF6B942202429600B0C2CB /* CustomControls */ = {
+			isa = PBXGroup;
+			children = (
+				56EF6B9922024AA600B0C2CB /* FacebookButton.swift */,
+			);
+			path = CustomControls;
+			sourceTree = "<group>";
+		};
 		56FC32992202110C001BDAD5 /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				569E5427220205580023B103 /* LoginViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		56FC329C220220E2001BDAD5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				56FC329D220220F4001BDAD5 /* Constants.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		97540397E8CB7466FD52017D /* Pods */ = {
@@ -148,6 +173,7 @@
 				569E541F220205570023B103 /* Frameworks */,
 				569E5420220205570023B103 /* Resources */,
 				17A5BFC1EEC9057493D84F98 /* [CP] Embed Pods Frameworks */,
+				A118FB138168EB9C3C55F84A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -221,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				569E5430220205590023B103 /* LaunchScreen.storyboard in Resources */,
+				56FC329B22021F64001BDAD5 /* GoogleService-Info.plist in Resources */,
 				569E542D220205590023B103 /* Assets.xcassets in Resources */,
 				569E542B220205580023B103 /* Main.storyboard in Resources */,
 			);
@@ -252,6 +279,8 @@
 				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
 				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -264,10 +293,34 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoviesApp/Pods-MoviesApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A118FB138168EB9C3C55F84A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MoviesApp/Pods-MoviesApp-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoviesApp/Pods-MoviesApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B13B3534326D51744403FBA8 /* [CP] Check Pods Manifest.lock */ = {
@@ -322,7 +375,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				569E5428220205580023B103 /* LoginViewController.swift in Sources */,
+				56EF6B9A22024AA600B0C2CB /* FacebookButton.swift in Sources */,
 				569E5426220205580023B103 /* AppDelegate.swift in Sources */,
+				56FC329E220220F4001BDAD5 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
