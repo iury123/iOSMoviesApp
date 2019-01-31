@@ -15,8 +15,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         checkIfUserIsLoggedByFacebook()
-        
-        facebookButton.setOnFacebookLoginResult(callback: { result in
+
+        facebookButton.setOnFacebookLoginResultCallback(callback: { result in
             let c = result
         })
     }

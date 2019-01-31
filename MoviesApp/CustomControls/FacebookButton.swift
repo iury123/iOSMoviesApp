@@ -12,7 +12,7 @@ import FacebookCore
 
 @IBDesignable class FacebookButton: UIStackView, LoginButtonDelegate {
     
-    private var onFacebookLoginResult: ((LoginResult) -> Void)? = nil
+    private var onFacebookLoginResultCallback: ((LoginResult) -> Void)? = nil
     
     private let facebookLoginButton: LoginButton = LoginButton(readPermissions: [ .publicProfile, .email ])
     
@@ -43,13 +43,13 @@ import FacebookCore
         addArrangedSubview(facebookLoginButton)
     }
     
-    func setOnFacebookLoginResult(callback: ((LoginResult) -> Void)?) {
-        onFacebookLoginResult = callback
+    func setOnFacebookLoginResultCallback(callback: ((LoginResult) -> Void)?) {
+        onFacebookLoginResultCallback = callback
     }
     
     func loginButtonDidCompleteLogin(_ loginButton: LoginButton, result: LoginResult) {
-        if onFacebookLoginResult != nil {
-             onFacebookLoginResult!(result)
+        if onFacebookLoginResultCallback != nil {
+             onFacebookLoginResultCallback!(result)
         }
     }
     
