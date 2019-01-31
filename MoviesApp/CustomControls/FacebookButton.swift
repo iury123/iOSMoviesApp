@@ -36,6 +36,7 @@ import FacebookCore
         removeArrangedSubview(facebookLoginButton)
         facebookLoginButton.removeFromSuperview()
         facebookLoginButton.delegate = self
+        facebookLoginButton.loginBehavior = .web
         facebookLoginButton.translatesAutoresizingMaskIntoConstraints = false
         facebookLoginButton.heightAnchor.constraint(equalToConstant: facebookButtonSize.height).isActive = true
         facebookLoginButton.widthAnchor.constraint(equalToConstant: facebookButtonSize.width).isActive = true
