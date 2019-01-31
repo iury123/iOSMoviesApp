@@ -7,23 +7,35 @@
 //
 
 import UIKit
+import FacebookCore
 
-class LoginViewController: UIViewController {
-
+class LoginViewController: UIViewController, Injectable, FacebookRequestUserProtocol {
+   
+    var facebookUserRequester: FacebookUserRequester!
+    
     @IBOutlet weak var facebookButton: FacebookButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         checkIfUserIsLoggedByFacebook()
-
-        facebookButton.setOnFacebookLoginResultCallback(callback: { result in
-            let c = result
-        })
     }
 
-
     private func checkIfUserIsLoggedByFacebook() {
-        
+        if(AccessToken.current != nil) {
+            facebookUserRequester.requestProfile(callback: self)
+        } else {
+            facebookButton.setOnFacebookLoginResultCallback(callback: { result in
+                self.facebookUserRequester.requestProfile(callback: self)
+            })
+        }
+    }
+    
+    func onSuccessRequestUser(response: MyProfileRequest.Response) {
+        print("Custom Graph Request Succeeded: \(response)")
+    }
+    
+    func onErrorRequestUser(error: Error) {
+        print("Custom Graph Request Failed: \(error)")
     }
 }
 

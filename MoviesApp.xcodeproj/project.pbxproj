@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		562CDFE522036F0300D401F6 /* FacebookRequestUserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562CDFE422036F0300D401F6 /* FacebookRequestUserProtocol.swift */; };
+		56976F5122028DB100FE0F11 /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56976F5022028DB100FE0F11 /* Injectable.swift */; };
+		56976F532202973700FE0F11 /* FacebookUserRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56976F522202973700FE0F11 /* FacebookUserRequester.swift */; };
 		569E5426220205580023B103 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569E5425220205580023B103 /* AppDelegate.swift */; };
 		569E5428220205580023B103 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569E5427220205580023B103 /* LoginViewController.swift */; };
 		569E542B220205580023B103 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 569E5429220205580023B103 /* Main.storyboard */; };
@@ -33,6 +36,9 @@
 /* Begin PBXFileReference section */
 		203A70C66DDB81ADD8631CC7 /* Pods-MoviesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoviesApp/Pods-MoviesApp.debug.xcconfig"; sourceTree = "<group>"; };
 		455E847AC253ABBBE8E21809 /* Pods-MoviesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoviesApp/Pods-MoviesApp.release.xcconfig"; sourceTree = "<group>"; };
+		562CDFE422036F0300D401F6 /* FacebookRequestUserProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookRequestUserProtocol.swift; sourceTree = "<group>"; };
+		56976F5022028DB100FE0F11 /* Injectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
+		56976F522202973700FE0F11 /* FacebookUserRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookUserRequester.swift; sourceTree = "<group>"; };
 		569E5422220205580023B103 /* MoviesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		569E5425220205580023B103 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		569E5427220205580023B103 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +87,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		562CDFE322036EDE00D401F6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				562CDFE422036F0300D401F6 /* FacebookRequestUserProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		56976F4F22028D9A00FE0F11 /* Injector */ = {
+			isa = PBXGroup;
+			children = (
+				56976F5022028DB100FE0F11 /* Injectable.swift */,
+			);
+			path = Injector;
+			sourceTree = "<group>";
+		};
 		569E5419220205570023B103 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +126,8 @@
 		569E5424220205580023B103 /* MoviesApp */ = {
 			isa = PBXGroup;
 			children = (
+				562CDFE322036EDE00D401F6 /* Protocols */,
+				56976F4F22028D9A00FE0F11 /* Injector */,
 				56EF6B942202429600B0C2CB /* CustomControls */,
 				56FC329C220220E2001BDAD5 /* Utils */,
 				56FC329A22021F64001BDAD5 /* GoogleService-Info.plist */,
@@ -138,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				569E5427220205580023B103 /* LoginViewController.swift */,
+				56976F522202973700FE0F11 /* FacebookUserRequester.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -374,10 +399,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56976F5122028DB100FE0F11 /* Injectable.swift in Sources */,
 				569E5428220205580023B103 /* LoginViewController.swift in Sources */,
 				56EF6B9A22024AA600B0C2CB /* FacebookButton.swift in Sources */,
 				569E5426220205580023B103 /* AppDelegate.swift in Sources */,
+				562CDFE522036F0300D401F6 /* FacebookRequestUserProtocol.swift in Sources */,
 				56FC329E220220F4001BDAD5 /* Constants.swift in Sources */,
+				56976F532202973700FE0F11 /* FacebookUserRequester.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

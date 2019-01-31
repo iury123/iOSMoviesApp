@@ -18,6 +18,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        let injector = Injector<Injectable, FacebookUserRequester>(callback: {(controller, data) in
+            controller.facebookUserRequester = data
+        })
+        
+        if let rootController = window?.rootViewController {
+            injector.inject(into: rootController, data: FacebookUserRequester())
+        }
+        
         SDKApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
         GIDSignIn.sharedInstance().clientID = Constants.googleClientId
         return true
